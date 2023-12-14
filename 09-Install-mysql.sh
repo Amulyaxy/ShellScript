@@ -10,9 +10,9 @@ else
     echo "You are in root user"
 fi
 
-yum install mysql -y 
+yum install mysqlhhh -y 
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
     echo "ERROR:: my sql is not installed"
     exit 1
