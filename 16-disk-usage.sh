@@ -11,4 +11,5 @@ do
     if [$usage -gt $Disl_THRESHOLD]
     then
         message+="High disk usage on $partition: $usage"
+    fi
 done <<< $DISK_USAGE
