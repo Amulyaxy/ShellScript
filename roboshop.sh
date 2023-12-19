@@ -24,7 +24,7 @@ do
 
 #Create route 53 record make sure delete exisiting records
 
-    aws route53 change-resource-record-sets \
+aws route53 change-resource-record-sets \
   --hosted-zone-id $ZONE_ID \
   --change-batch '
     {
@@ -38,9 +38,9 @@ do
             ,"ResourceRecords"  : [{
                 "Value"         : "'$IP_ADDRESS'"
             }]
-        }
-        }]
-    }'
+      }
+    }]
+  }'
         
 done
 
