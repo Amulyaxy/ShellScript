@@ -23,9 +23,9 @@ do
 
 
 #Create route 53 record make sure delete exisiting records
-  aws route53 change-resource-record-sets \
-  --hosted-zone-id $ZONE_ID \
-  --change-batch '
+aws route53 change-resource-record-sets \
+    --hosted-zone-id $ZONE_ID \
+    --change-batch '
     {
         "Comment": "Creating a record set for cognito endpoint"
         ,"Changes": [{
@@ -37,10 +37,10 @@ do
             ,"ResourceRecords"  : [{
                 "Value"         : "'$IP_ADDRESS'"
             }]
-      }
-    }]
-  }'
-        
+        }
+        }]
+    }
+        '
 done
 
 
