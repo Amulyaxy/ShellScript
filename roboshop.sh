@@ -5,7 +5,7 @@ SECURITYGROUP_ID=sg-0abbe9ab46109976d
 #REGION=us-east-1
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "cart" "catalogue" "user" "web" "shipping" "payment" "dispatch")
 ZONE_ID=Z04066242LG1OKYDJUBEZ
-DOMAIN_NAME=awsdevops.website
+DOMAIN_NAME="awsdevops.website"
 
 for i in "${INSTANCES[@]}"
 do
@@ -23,8 +23,7 @@ do
 
 
 #Create route 53 record make sure delete exisiting records
-
-aws route53 change-resource-record-sets \
+  aws route53 change-resource-record-sets \
   --hosted-zone-id $ZONE_ID \
   --change-batch '
     {
